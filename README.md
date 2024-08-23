@@ -38,6 +38,7 @@ The fit time comparison indicates:
 ### Summary of Feature Coefficients
 
 The coefficients from the logistic regression model provide insights into the importance and direction of the relationship between each feature and the target variable (e.g., whether a customer will subscribe to a term deposit). Here’s a summary of the most important features based on their coefficients:
+![Feature Importance](images/Logestic_Regression_Feature_importance.png)
 
 1. **`nr.employed` (-0.781):** 
    - This feature has the most significant negative impact on the prediction. A lower number of employees seems to increase the likelihood of subscribing to a term deposit. This might suggest that during periods of lower employment, customers are more likely to subscribe, potentially due to economic uncertainty or lower opportunity costs.
