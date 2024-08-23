@@ -1,20 +1,5 @@
 Running model :  Logreg
- Logreg fit time : 0.4083, Training Accuracy :  0.8999, Test Accuracy: 0.9008
-Logreg Classification report : 
-               precision    recall  f1-score   support
-
-          no       0.91      0.99      0.95      7310
-         yes       0.69      0.22      0.33       928
-
-    accuracy                           0.90      8238
-   macro avg       0.80      0.60      0.64      8238
-weighted avg       0.88      0.90      0.88      8238
-
-Logreg Confusion Matrix : 
- [[7218   92]
- [ 725  203]]
-Running model :  Logreg
- Logreg fit time : 0.2973, Training Accuracy :  0.8999, Test Accuracy: 0.9008
+ Logreg fit time : 0.3224, Training Accuracy :  0.8999, Test Accuracy: 0.9008
 Logreg Classification report : 
                precision    recall  f1-score   support
 
@@ -29,7 +14,7 @@ Logreg Confusion Matrix :
  [[7218   92]
  [ 725  203]]
 Running model :  knn
- knn fit time : 0.0731, Training Accuracy :  0.9123, Test Accuracy: 0.8961
+ knn fit time : 0.0698, Training Accuracy :  0.9123, Test Accuracy: 0.8961
 knn Classification report : 
                precision    recall  f1-score   support
 
@@ -44,7 +29,7 @@ knn Confusion Matrix :
  [[7109  201]
  [ 655  273]]
 Running model :  dtree
- dtree fit time : 0.2300, Training Accuracy :  0.9954, Test Accuracy: 0.8450
+ dtree fit time : 0.2256, Training Accuracy :  0.9954, Test Accuracy: 0.8450
 dtree Classification report : 
                precision    recall  f1-score   support
 
@@ -59,7 +44,7 @@ dtree Confusion Matrix :
  [[6641  669]
  [ 608  320]]
 Running model :  svm
- svm fit time : 45.1137, Training Accuracy :  0.9049, Test Accuracy: 0.9035
+ svm fit time : 212.2836, Training Accuracy :  0.9049, Test Accuracy: 0.9035
 svm Classification report : 
                precision    recall  f1-score   support
 
@@ -73,3 +58,10 @@ weighted avg       0.89      0.90      0.88      8238
 svm Confusion Matrix : 
  [[7217   93]
  [ 702  226]]
+
+Summary Table: 
+    Model Fit_Time(sec) Train_accuracy Test_accuracy Precision Recall F1-Score ROC_AUC_Score
+0  Logreg         0.322            0.9         0.901     0.688  0.219    0.332         0.801
+1     knn          0.07          0.912         0.896     0.576  0.294    0.389         0.741
+2   dtree         0.226          0.995         0.845     0.324  0.345    0.334         0.628
+3     svm       212.284          0.905         0.903     0.708  0.244    0.362         0.702

@@ -1,5 +1,5 @@
 Running model :  Logreg
- Logreg fit time : 15.1993, Training Accuracy :  0.8996, Test Accuracy: 0.8997
+ Logreg fit time : 491.0319, Training Accuracy :  0.8996, Test Accuracy: 0.8997
  Logreg best_params : {'Logreg__C': 1, 'Logreg__max_iter': 200, 'Logreg__penalty': 'l2', 'Logreg__solver': 'liblinear'}
 Logreg Classification report : 
                precision    recall  f1-score   support
@@ -15,7 +15,7 @@ Logreg Confusion Matrix :
  [[7247   63]
  [ 763  165]]
 Running model :  Logreg_others
- Logreg_others fit time : 5.4711, Training Accuracy :  0.8996, Test Accuracy: 0.8997
+ Logreg_others fit time : 6.9543, Training Accuracy :  0.8996, Test Accuracy: 0.8997
  Logreg_others best_params : {'Logreg_others__max_iter': 5000, 'Logreg_others__penalty': None, 'Logreg_others__solver': 'lbfgs'}
 Logreg_others Classification report : 
                precision    recall  f1-score   support
@@ -31,7 +31,7 @@ Logreg_others Confusion Matrix :
  [[7247   63]
  [ 763  165]]
 Running model :  Logreg_saga
- Logreg_saga fit time : 3.8967, Training Accuracy :  0.8996, Test Accuracy: 0.8997
+ Logreg_saga fit time : 4.3916, Training Accuracy :  0.8996, Test Accuracy: 0.8997
  Logreg_saga best_params : {'Logreg_saga__C': 1, 'Logreg_saga__l1_ratio': 0.7, 'Logreg_saga__max_iter': 1000, 'Logreg_saga__penalty': 'elasticnet', 'Logreg_saga__solver': 'saga'}
 Logreg_saga Classification report : 
                precision    recall  f1-score   support
@@ -47,7 +47,7 @@ Logreg_saga Confusion Matrix :
  [[7247   63]
  [ 763  165]]
 Running model :  knn
- knn fit time : 21.1871, Training Accuracy :  0.8994, Test Accuracy: 0.8982
+ knn fit time : 21.2517, Training Accuracy :  0.8994, Test Accuracy: 0.8982
  knn best_params : {'knn__n_neighbors': 15, 'knn__p': 2, 'knn__weights': 'uniform'}
 knn Classification report : 
                precision    recall  f1-score   support
@@ -63,7 +63,7 @@ knn Confusion Matrix :
  [[7187  123]
  [ 716  212]]
 Running model :  dtree
- dtree fit time : 6.8486, Training Accuracy :  0.8994, Test Accuracy: 0.9002
+ dtree fit time : 7.2694, Training Accuracy :  0.8994, Test Accuracy: 0.9002
  dtree best_params : {'dtree__criterion': 'entropy', 'dtree__max_depth': 4, 'dtree__min_samples_leaf': 15, 'dtree__min_samples_split': 2}
 dtree Classification report : 
                precision    recall  f1-score   support
@@ -79,7 +79,7 @@ dtree Confusion Matrix :
  [[7246   64]
  [ 758  170]]
 Running model :  svm_rbf
- svm_rbf fit time : 1965.2210, Training Accuracy :  0.8998, Test Accuracy: 0.8995
+ svm_rbf fit time : 2410.7841, Training Accuracy :  0.8998, Test Accuracy: 0.8995
  svm_rbf best_params : {'svm_rbf__C': 1, 'svm_rbf__gamma': 0.1, 'svm_rbf__kernel': 'rbf'}
 svm_rbf Classification report : 
                precision    recall  f1-score   support
@@ -95,7 +95,7 @@ svm_rbf Confusion Matrix :
  [[7253   57]
  [ 771  157]]
 Running model :  svm_linear
- svm_linear fit time : 278.8487, Training Accuracy :  0.8975, Test Accuracy: 0.8977
+ svm_linear fit time : 421.4123, Training Accuracy :  0.8975, Test Accuracy: 0.8977
  svm_linear best_params : {'svm_linear__C': 0.1, 'svm_linear__kernel': 'linear'}
 svm_linear Classification report : 
                precision    recall  f1-score   support
@@ -110,3 +110,13 @@ weighted avg       0.88      0.90      0.87      8238
 svm_linear Confusion Matrix : 
  [[7208  102]
  [ 741  187]]
+
+Summary Table: 
+           Model Fit_Time(sec) Train_accuracy Test_accuracy Precision Recall F1-Score ROC_AUC_Score
+0         Logreg       491.032            0.9           0.9     0.724  0.178    0.285         0.775
+1  Logreg_others         6.954            0.9           0.9     0.724  0.178    0.285         0.775
+2    Logreg_saga         4.392            0.9           0.9     0.724  0.178    0.285         0.775
+3            knn        21.252          0.899         0.898     0.633  0.228    0.336         0.765
+4          dtree         7.269          0.899           0.9     0.726  0.183    0.293         0.786
+5        svm_rbf      2410.784            0.9         0.899     0.734  0.169    0.275         0.604
+6     svm_linear       421.412          0.897         0.898     0.647  0.202    0.307         0.761
