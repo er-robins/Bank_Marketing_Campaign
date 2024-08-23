@@ -4,6 +4,14 @@
 
 This project involves analyzing data from a bank marketing campaign to predict whether a client will subscribe to a term deposit. Various machine learning models were used, and their performance was evaluated using metrics like accuracy, precision, recall, F1-score, and ROC-AUC. Below is a summary of the findings and key insights.
 
+### Summary of Data Used in the Bank Marketing Campaign
+
+The dataset used in this project was collected from a Portuguese bank and covers a series of 17 direct marketing campaigns conducted between May 2008 and November 2010. These campaigns were primarily conducted via telephone, targeting clients for a long-term deposit subscription with attractive interest rates. The dataset contains a total of 79,354 contacts made during these campaigns, with 6,499 successful outcomes, representing an 8% success rate.
+
+## Notebooks
+
+- [Bank Marketing Campaign Analysis](Bank_Marketing_Campaign.ipynb)
+
 ## Models and Performance Evaluation
 
 ### Receiver Operating Characteristic (ROC) Curve
@@ -23,6 +31,18 @@ This plot compares different scoring metrics across models. Key takeaways includ
 - Logistic Regression models maintain high accuracy and AUC scores but vary in recall and precision.
 - The Decision Tree model shows the highest variance between training accuracy and test accuracy, indicating potential overfitting.
 - SVM models generally perform well in terms of precision and recall but have a lower AUC score.
+
+# Scoring Summary Table with Grid Optimization
+
+| Model         | Fit_Time(sec) | Train_accuracy | Test_accuracy | Precision | Recall | F1-Score | ROC_AUC_Score |
+|---------------|---------------|----------------|---------------|-----------|--------|----------|---------------|
+| Logreg        | 491.032       | 0.9            | 0.9           | 0.724     | 0.178  | 0.285    | 0.775         |
+| Logreg_others | 6.954         | 0.9            | 0.9           | 0.724     | 0.178  | 0.285    | 0.775         |
+| Logreg_saga   | 4.392         | 0.9            | 0.9           | 0.724     | 0.178  | 0.285    | 0.775         |
+| knn           | 21.252        | 0.899          | 0.898         | 0.633     | 0.228  | 0.336    | 0.765         |
+| dtree         | 7.269         | 0.899          | 0.9           | 0.726     | 0.183  | 0.293    | 0.786         |
+| svm_rbf       | 2410.784      | 0.9            | 0.899         | 0.734     | 0.169  | 0.275    | 0.604         |
+| svm_linear    | 421.412       | 0.897          | 0.898         | 0.647     | 0.202  | 0.307    | 0.761         |
 
 ### Fit Time by Model
 
