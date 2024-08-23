@@ -119,4 +119,125 @@ Summary Table:
 3            knn        21.252          0.899         0.898     0.633  0.228    0.336         0.765
 4          dtree         7.269          0.899           0.9     0.726  0.183    0.293         0.786
 5        svm_rbf      2410.784            0.9         0.899     0.734  0.169    0.275         0.604
-6     svm_linear       421.412          0.897         0.898     0.647  0.202    0.307         0.761
+6     svm_linear       421.412          0.897         0.898     0.647  0.202    0.307         0.761Running model :  Logreg
+ Logreg fit time : 14.9176, Training Accuracy :  0.8996, Test Accuracy: 0.8997
+ Logreg best_params : {'Logreg__C': 1, 'Logreg__max_iter': 200, 'Logreg__penalty': 'l2', 'Logreg__solver': 'liblinear'}
+Logreg Classification report : 
+               precision    recall  f1-score   support
+
+          no       0.90      0.99      0.95      7310
+         yes       0.72      0.18      0.29       928
+
+    accuracy                           0.90      8238
+   macro avg       0.81      0.58      0.62      8238
+weighted avg       0.88      0.90      0.87      8238
+
+Logreg Confusion Matrix : 
+ [[7247   63]
+ [ 763  165]]
+Running model :  Logreg_others
+ Logreg_others fit time : 5.1083, Training Accuracy :  0.8996, Test Accuracy: 0.8997
+ Logreg_others best_params : {'Logreg_others__max_iter': 5000, 'Logreg_others__penalty': None, 'Logreg_others__solver': 'lbfgs'}
+Logreg_others Classification report : 
+               precision    recall  f1-score   support
+
+          no       0.90      0.99      0.95      7310
+         yes       0.72      0.18      0.29       928
+
+    accuracy                           0.90      8238
+   macro avg       0.81      0.58      0.62      8238
+weighted avg       0.88      0.90      0.87      8238
+
+Logreg_others Confusion Matrix : 
+ [[7247   63]
+ [ 763  165]]
+Running model :  Logreg_saga
+ Logreg_saga fit time : 3.7766, Training Accuracy :  0.8996, Test Accuracy: 0.8997
+ Logreg_saga best_params : {'Logreg_saga__C': 1, 'Logreg_saga__l1_ratio': 0.7, 'Logreg_saga__max_iter': 1000, 'Logreg_saga__penalty': 'elasticnet', 'Logreg_saga__solver': 'saga'}
+Logreg_saga Classification report : 
+               precision    recall  f1-score   support
+
+          no       0.90      0.99      0.95      7310
+         yes       0.72      0.18      0.29       928
+
+    accuracy                           0.90      8238
+   macro avg       0.81      0.58      0.62      8238
+weighted avg       0.88      0.90      0.87      8238
+
+Logreg_saga Confusion Matrix : 
+ [[7247   63]
+ [ 763  165]]
+Running model :  knn
+ knn fit time : 20.1424, Training Accuracy :  0.8994, Test Accuracy: 0.8982
+ knn best_params : {'knn__n_neighbors': 15, 'knn__p': 2, 'knn__weights': 'uniform'}
+knn Classification report : 
+               precision    recall  f1-score   support
+
+          no       0.91      0.98      0.94      7310
+         yes       0.63      0.23      0.34       928
+
+    accuracy                           0.90      8238
+   macro avg       0.77      0.61      0.64      8238
+weighted avg       0.88      0.90      0.88      8238
+
+knn Confusion Matrix : 
+ [[7187  123]
+ [ 716  212]]
+Running model :  dtree
+ dtree fit time : 6.7486, Training Accuracy :  0.8994, Test Accuracy: 0.9002
+ dtree best_params : {'dtree__criterion': 'entropy', 'dtree__max_depth': 4, 'dtree__min_samples_leaf': 15, 'dtree__min_samples_split': 2}
+dtree Classification report : 
+               precision    recall  f1-score   support
+
+          no       0.91      0.99      0.95      7310
+         yes       0.73      0.18      0.29       928
+
+    accuracy                           0.90      8238
+   macro avg       0.82      0.59      0.62      8238
+weighted avg       0.89      0.90      0.87      8238
+
+dtree Confusion Matrix : 
+ [[7246   64]
+ [ 758  170]]
+Running model :  svm_rbf
+ svm_rbf fit time : 1872.3977, Training Accuracy :  0.8998, Test Accuracy: 0.8995
+ svm_rbf best_params : {'svm_rbf__C': 1, 'svm_rbf__gamma': 0.1, 'svm_rbf__kernel': 'rbf'}
+svm_rbf Classification report : 
+               precision    recall  f1-score   support
+
+          no       0.90      0.99      0.95      7310
+         yes       0.73      0.17      0.27       928
+
+    accuracy                           0.90      8238
+   macro avg       0.82      0.58      0.61      8238
+weighted avg       0.88      0.90      0.87      8238
+
+svm_rbf Confusion Matrix : 
+ [[7253   57]
+ [ 771  157]]
+Running model :  svm_linear
+ svm_linear fit time : 281.8590, Training Accuracy :  0.8975, Test Accuracy: 0.8977
+ svm_linear best_params : {'svm_linear__C': 0.1, 'svm_linear__kernel': 'linear'}
+svm_linear Classification report : 
+               precision    recall  f1-score   support
+
+          no       0.91      0.99      0.94      7310
+         yes       0.65      0.20      0.31       928
+
+    accuracy                           0.90      8238
+   macro avg       0.78      0.59      0.63      8238
+weighted avg       0.88      0.90      0.87      8238
+
+svm_linear Confusion Matrix : 
+ [[7208  102]
+ [ 741  187]]
+
+Summary Table: 
+           Model Fit_Time(sec) Train_accuracy Test_accuracy Precision Recall F1-Score ROC_AUC_Score
+0         Logreg        14.918            0.9           0.9     0.724  0.178    0.285         0.775
+1  Logreg_others         5.108            0.9           0.9     0.724  0.178    0.285         0.775
+2    Logreg_saga         3.777            0.9           0.9     0.724  0.178    0.285         0.775
+3            knn        20.142          0.899         0.898     0.633  0.228    0.336         0.765
+4          dtree         6.749          0.899           0.9     0.726  0.183    0.293         0.786
+5        svm_rbf      1872.398            0.9         0.899     0.734  0.169    0.275         0.604
+6     svm_linear       281.859          0.897         0.898     0.647  0.202    0.307         0.761
